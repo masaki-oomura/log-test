@@ -1,0 +1,25 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js アプリケーション</title>
+</head>
+<body>
+  <% if (submitted) { %>
+    <!-- 提出後のメッセージ -->
+    <p>ログに記録しました: <%= submittedText %></p>
+    <!-- トップ画面に戻るボタン -->
+    <a href="/">トップ画面に戻る</a>
+  <% } else { %>
+    <!-- 提出前のフォーム -->
+    <form action="/submit" method="post">
+      <label for="inputText">文字列入力:</label>
+      <input type="text" id="inputText" name="inputText" required>
+      <button type="submit">Submit</button>
+    </form>
+  <% } %>
+</body>
+</html>
