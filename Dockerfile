@@ -1,5 +1,5 @@
 # ベースイメージの取得
-FROM registry.redhat.io/ubi8:latest
+FROM registry.access.redhat.com/ubi8:latest
 
 # node.jsの利用に必要なパッケージ（ランタイム）をインストール
 # RUNの後にlinuxコマンドをそのまま記載します
